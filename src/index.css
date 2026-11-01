@@ -1,0 +1,50 @@
+/* src/index.css */
+
+/* 1. Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Body & HTML setup */
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(1200px 800px at 20% -10%, rgba(56, 189, 248, 0.14), transparent 60%),
+              radial-gradient(900px 600px at 90% 10%, rgba(59, 130, 246, 0.10), transparent 55%),
+              #ffffff;
+
+  color: #0f172a;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* 3. Reset Vite/React Default Container Behaviors */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: block; /* Overrides Vite's default flex centering layout */
+  margin: 0;
+  padding: 0;
+}
+
+/* 4. Global Typography */
+h1, h2, h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.app-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  width: 100%;
+  flex-grow: 1;
+}

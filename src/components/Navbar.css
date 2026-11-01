@@ -1,0 +1,234 @@
+/* NAVBAR BASE */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(11, 15, 25, 0.85); /* Semi-transparent dark background */
+  backdrop-filter: blur(12px); /* Sleek glassmorphism */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+/* Update this section in your src/components/Navbar.css */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  /* Change this from 1200px to 100% to go edge-to-edge */
+  width: 100%; 
+  max-width: 100%; 
+  
+  /* Remove the margin centering auto rule */
+  margin: 0; 
+  
+  /* Adjust horizontal padding so the content doesn't hit the absolute edges of your screen */
+  padding: 1.25rem 3rem; 
+  box-sizing: border-box; /* Ensures padding doesn't break full-width scaling */
+}
+
+/* LOGO STYLE */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.025em;
+  transition: transform 0.2s ease;
+}
+
+.navbar-logo:hover {
+  transform: translateY(-1px);
+}
+
+.logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon svg {
+  width: 28px;
+  height: 28px;
+  color: #38bdf8; /* Accent light blue */
+  transition: transform 0.8s ease-in-out;
+  display: block;
+}
+.navbar-logo{
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-logo:hover .logo-icon svg {
+  transform: rotate(180deg); /* Smooth spin on logo hover */
+}
+
+/* DESKTOP LINKS */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #94a3b8; /* Muted modern grey */
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  position: relative;
+  padding: 0.25rem 0;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+/* Accent active line indicator under link */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #38bdf8;
+  transition: width 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: #ffffff;
+}
+
+/* HAMBURGER BUTTON (Hidden on Desktop) */
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 30px;
+  height: 24px;
+  position: relative;
+  z-index: 1100; /* Stays above overlay */
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Morphing burger animations on open */
+.hamburger-btn.open .line-1 {
+  transform: translateY(11px) rotate(45deg);
+}
+.hamburger-btn.open .line-2 {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+.hamburger-btn.open .line-3 {
+  transform: translateY(-11px) rotate(-45deg);
+}
+
+/* PREMIUM MOBILE OVERLAY MENU */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(11, 15, 25, 0.96); /* Dark tint */
+  backdrop-filter: blur(20px); /* Deep premium blur */
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.mobile-menu-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  transform: translateY(30px);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-menu-overlay.active .mobile-links {
+  transform: translateY(0);
+}
+
+.mobile-link {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #94a3b8;
+  text-decoration: none;
+  letter-spacing: -0.03em;
+  transition: all 0.2s ease;
+}
+
+.mobile-link:hover {
+  color: #38bdf8;
+  transform: scale(1.05);
+}
+
+.nav-cv-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.85rem;
+  background-color: #0b132a;
+  color: #38bdf8;
+  border: 1px solid #1e293b;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.nav-cv-pill:hover {
+  background-color: #38bdf8;
+  color: #0b132a;
+  border-color: #38bdf8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+}
+
+.mobile-cv-link {
+  color: #38bdf8 !important;
+  border-bottom: 2px solid #38bdf8;
+  padding-bottom: 0.25rem;
+}
+
+/* RESPONSIVE BREAKPOINT */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none; /* Hide standard navbar on mobile */
+  }
+
+  .hamburger-btn {
+    display: flex; /* Reveal burger */
+  }
+}

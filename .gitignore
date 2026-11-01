@@ -1,0 +1,44 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments & Virtual Envs
+.env
+.env.local
+.env.*.local
+.venv/
+env/
+venv/
+ENV/
+Include/
+Lib/
+Scripts/
+pyvenv.cfg
+
+# Node & Package Managers
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Firebase & Vercel
+.firebase/
+.vercel/
+*serviceAccountKey*.json
+serviceAccountKey.json
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Nested repos / archives / OS
+portfolio-backend/
+.DS_Store
+Thumbs.db
+
+api/
+requirements.txt
+*.py

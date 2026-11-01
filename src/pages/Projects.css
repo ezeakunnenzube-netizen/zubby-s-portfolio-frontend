@@ -1,0 +1,457 @@
+/* ==========================================
+   GLOBAL CONTAINER CONTEXTS
+   ========================================== */
+.projects-page-wrapper {
+  width: 100%;
+  background-color: #f8fafc; /* Minimal structural background context */
+  color: #0f172a;
+}
+
+.proj-container {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   SECTION 1: HERO DISPLAY OVERVIEW
+   ========================================== */
+.proj-hero-section {
+  background-color: #ffffff;
+  padding: 8.5rem 0 5.5rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.proj-meta-tag {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 0.15em;
+  display: block;
+  margin-bottom: 1.25rem;
+}
+
+.proj-hero-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #0b132a;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: -0.02em;
+}
+
+.proj-hero-title em {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.proj-hero-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #475569;
+  max-width: 720px;
+  margin: 0;
+}
+
+/* ==========================================
+   SECTION 2: PROJECTS DISPLAY GRID
+   ========================================== */
+.proj-grid-section {
+  padding: 6.5rem 0 7.5rem 0;
+}
+
+/* Responsive Card Display Layout */
+.projects-display-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  width: 100%;
+}
+
+/* Mobile responsive - single column */
+@media (max-width: 768px) {
+  .projects-display-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* Tablet responsive - adjust gap */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .projects-display-grid {
+    gap: 1.5rem;
+  }
+}
+
+/* Individual Premium Project Card */
+.premium-project-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.premium-project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(15, 23, 42, 0.1);
+  border-color: #cbd5e1;
+}
+
+/* Aspect-locked image system with micro-zoom */
+.project-image-container {
+  display: block;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.5 / 1;
+  overflow: hidden;
+  background-color: #e2e8f0;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.project-display-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.premium-project-card:hover .project-display-img {
+  transform: scale(1.05);
+}
+
+/* Hover overlay indicator on project image */
+.project-image-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: blur(2px);
+  z-index: 2;
+}
+
+.live-preview-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1.25rem;
+  background-color: #ffffff;
+  color: #0f172a;
+  border-radius: 9999px;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  transform: translateY(8px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-image-container:hover .project-image-hover-overlay {
+  opacity: 1;
+}
+
+.project-image-container:hover .live-preview-pill {
+  transform: translateY(0);
+}
+
+/* Content Box */
+.project-meta-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.project-mini-category {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.85rem;
+}
+
+.project-display-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.75rem 0;
+  letter-spacing: -0.01em;
+}
+
+.project-title-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.project-title-link:hover {
+  color: #4f46e5;
+}
+
+.project-display-desc {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0 0 1.75rem 0;
+  flex-grow: 1;
+}
+
+/* Tech Pills Row */
+.project-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.tech-pill {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #64748b;
+  background-color: #f1f5f9;
+  padding: 0.25rem 0.6rem;
+  border-radius: 3px;
+  letter-spacing: 0.02em;
+}
+
+/* Card Action Footer */
+.card-footer-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 1.25rem;
+  margin-top: auto;
+  transition: color 0.2s ease;
+}
+
+.action-label-text {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: 0.05em;
+}
+
+.action-arrow-icon {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.premium-project-card:hover .action-arrow-icon {
+  transform: translateX(4px);
+  color: #0f172a;
+}
+
+/* RESPONSIVE LAYOUT BREAKPOINTS */
+@media (max-width: 1100px) {
+  .projects-display-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-display-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* ==========================================
+   SECTION 3: CORE COMPETENCIES MATRIX STRIP
+   ========================================== */
+.proj-competencies-section {
+  background-color: #ffffff;
+  padding: 6.5rem 0;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.competencies-split-wrapper {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 4.5rem;
+  align-items: center;
+}
+
+.competency-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #0b132a;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.01em;
+}
+
+.competency-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #64748b;
+  margin: 0;
+}
+
+.competencies-cards-right-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.competency-mini-card {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  padding: 2rem 1.5rem;
+}
+
+.comp-icon-indicator {
+  font-family: 'Fira Code', monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0b132a;
+  margin-bottom: 1.5rem;
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.comp-icon-indicator svg {
+  width: 18px;
+  height: 18px;
+}
+
+.competency-mini-card h4 {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #0b132a;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 0.02em;
+}
+
+.competency-mini-card p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #64748b;
+  margin: 0;
+}
+
+/* ==========================================
+   SECTION 4: CONNECTIONS CALLOUT FIELD
+   ========================================== */
+.proj-collaboration-cta {
+  background-color: #ffffff;
+  padding: 8.5rem 0;
+}
+
+.cta-layout-center {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.collaboration-heading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #0b132a;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.02em;
+}
+
+.collaboration-subtext {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.05rem;
+  color: #64748b;
+  max-width: 600px;
+  line-height: 1.65;
+  margin: 0 0 2.75rem 0;
+}
+
+.collaboration-buttons-cluster {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.btn-cta-dark {
+  background-color: #0b132a;
+  color: #ffffff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 1rem 2.25rem;
+  border-radius: 4px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: opacity 0.2s;
+}
+
+.btn-cta-dark:hover {
+  opacity: 0.9;
+}
+
+.btn-cta-flat {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #0b132a;
+  text-decoration: none;
+  border-bottom: 2px solid #0b132a;
+  padding-bottom: 0.25rem;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN ADAPTATION BREAKPOINTS
+   ========================================== */
+@media (max-width: 1200px) {
+  .proj-triple-columns-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .competencies-split-wrapper {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .competencies-cards-right-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .proj-hero-title { font-size: 2.5rem; }
+  .proj-triple-columns-grid { grid-template-columns: 1fr; }
+  .collaboration-heading { font-size: 1.75rem; }
+  .collaboration-buttons-cluster { flex-direction: column; width: 100%; }
+  .btn-cta-dark { width: 100%; justify-content: center; box-sizing: border-box; }
+}

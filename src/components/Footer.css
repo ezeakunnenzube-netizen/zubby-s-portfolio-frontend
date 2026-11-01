@@ -1,0 +1,183 @@
+/* ==========================================
+   GLOBAL PREMIUM FOOTER STYLES
+   ========================================== */
+.premium-global-footer {
+  width: 100%;
+  background-color: #f1f3f5; /* Light soft background canvas to match layout exactly */
+  padding: 5rem 4rem 3.5rem 4rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-top-container {
+  width: 100%;
+  max-width: 1360px;
+  display: grid;
+  grid-template-columns: 1.25fr 0.85fr 0.9fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+/* Brand Column Styles */
+.footer-brand-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-brand-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #0b132a;
+  margin: 0 0 1.25rem 0;
+  letter-spacing: -0.01em;
+}
+
+.footer-brand-description {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #5c697d; /* Premium slate typography shade */
+  margin: 0;
+  max-width: 380px;
+}
+
+/* Meta Section Label Monospace Tracking Headers */
+.footer-meta-header {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #0b132a;
+  margin: 0 0 1.5rem 0;
+}
+
+/* Navigation Menu Stack Links */
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.footer-links-list li a {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #5c697d;
+  text-decoration: none;
+  transition: color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.footer-links-list li a:hover {
+  color: #0b132a;
+}
+
+/* Connect Row & Social Action Rings Setup */
+.footer-social-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footer-social-icon-ring {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  color: #0b132a;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.footer-social-icon-ring svg {
+  width: 16px;
+  height: 16px;
+}
+
+.footer-social-icon-ring:hover {
+  border-color: #0b132a;
+  background-color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.04);
+}
+
+/* Divider Split Line Element */
+.footer-divider-line {
+  width: 100%;
+  max-width: 1360px;
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin: 0 0 2rem 0;
+}
+
+/* Bottom Legal Row Layout Context */
+.footer-bottom-container {
+  width: 100%;
+  max-width: 1360px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-copyright {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.85rem;
+  color: #5c697d;
+}
+
+.footer-legal-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.legal-link-item {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #5c697d;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color 0.2s ease;
+}
+
+.legal-link-item:hover {
+  color: #0b132a;
+}
+
+.external-link-arrow {
+  width: 11px;
+  height: 11px;
+  color: #94a3b8;
+}
+
+/* RESPONSIVE LAYOUT RESPONSIVENESS */
+@media (max-width: 960px) {
+  .footer-top-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+  .footer-brand-description {
+    max-width: 100%;
+  }
+  .footer-bottom-container {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+  .premium-global-footer {
+    padding: 4rem 2rem 2.5rem 2rem;
+  }
+}

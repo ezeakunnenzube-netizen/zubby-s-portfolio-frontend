@@ -1,0 +1,496 @@
+/* ==========================================
+   GLOBAL STRUCTURE & PAGE LAYOUT CONTEXT
+   ========================================== */
+.about-page-wrapper {
+  width: 100%;
+  background-color: #ffffff;
+  color: #0f172a;
+  overflow-x: hidden;
+}
+
+.about-container {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+.grid-2-col {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.align-stretch {
+  align-items: stretch;
+}
+
+/* Typography Reuse Elements */
+.section-mini-tag {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #64748b;
+  margin-bottom: 1.25rem;
+  display: inline-block;
+}
+
+.about-section-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #0b132a;
+  line-height: 1.15;
+  margin: 0 0 1.75rem 0;
+  letter-spacing: -0.02em;
+}
+
+/* ==========================================
+   SECTION 1: COSMIC HERO BLOCK
+   ========================================== */
+.about-hero-section {
+  position: relative;
+  width: 100%;
+  background-image: url('https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  padding: 10rem 2rem 8rem 2rem;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.about-hero-gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(15, 23, 42, 0.75) 0%, #0b132a 100%);
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.about-meta-tag {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.2em;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.about-hero-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 3.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 2rem 0 1.5rem 0;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.about-hero-title .highlight-text {
+  color: #38bdf8; /* Accent light blue text gradient feel */
+}
+
+.about-hero-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: #cbd5e1;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* ==========================================
+   SECTION 2: METHODOLOGY & DASHBOARD CARD
+   ========================================== */
+.about-methodology-section {
+  padding: 8rem 0;
+  background-color: #ffffff;
+}
+
+.about-body-paragraph {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #475569;
+  margin-bottom: 2.5rem;
+}
+
+.mini-highlights-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.mini-highlight-box h5 {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #0b132a;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 0.05em;
+}
+
+.mini-highlight-box p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Thesis Dashboard Card Styles */
+.thesis-dashboard-card {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  padding: 2.5rem;
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.03);
+}
+
+.thesis-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.thesis-card-header h4 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0b132a;
+  margin: 0 0 0.25rem 0;
+}
+
+.thesis-sub {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #94a3b8;
+  letter-spacing: 0.05em;
+}
+
+.thesis-icon {
+  width: 20px;
+  height: 20px;
+  color: #64748b;
+}
+
+.thesis-quote-block p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #475569;
+  font-style: italic;
+  margin: 0 0 2rem 0;
+  background-color: #ffffff;
+  padding: 1.25rem;
+  border-left: 3px solid #0b132a;
+  border-radius: 0 3px 3px 0;
+}
+
+.thesis-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.spec-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.spec-label {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #94a3b8;
+  margin-bottom: 0.35rem;
+}
+
+.spec-value {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #0b132a;
+}
+
+/* ==========================================
+   SECTION 3: BRIDGE GRID CARDS
+   ========================================== */
+.about-bridge-section {
+  padding: 8rem 0;
+  background-color: #f1f3f5; /* Light Section Block */
+}
+
+.centered-header {
+  text-align: center;
+  margin-bottom: 4.5rem;
+}
+
+.about-section-subtitle-muted {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.1rem;
+  color: #64748b;
+  margin: -0.5rem 0 0 0;
+}
+
+.bridge-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.bridge-card {
+  background-color: #ffffff;
+  padding: 3rem 2rem;
+  border-radius: 3px;
+  border: 1px solid #e2e8f0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.bridge-icon-wrapper {
+  color: #0b132a;
+  margin-bottom: 2rem;
+}
+
+.bridge-icon-wrapper svg {
+  width: 22px;
+  height: 22px;
+  stroke-width: 1.5px;
+}
+
+.bridge-card h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0b132a;
+  margin: 0 0 0.75rem 0;
+}
+
+.bridge-card p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #475569;
+  margin: 0 0 2rem 0;
+}
+
+.step-tag {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #cbd5e1;
+  margin-top: auto;
+}
+
+/* ==========================================
+   SECTION 4: PRECISION & NUMERICAL DASHBOARD
+   ========================================== */
+.about-precision-section {
+  padding: 9rem 0;
+  background-color: #ffffff;
+}
+
+.precision-pillars-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.precision-pillar-row {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.precision-pillar-row .p-num {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #64748b;
+  margin-top: 0.2rem;
+}
+
+.precision-pillar-row h4 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0b132a;
+  margin: 0 0 0.4rem 0;
+}
+
+.precision-pillar-row p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #64748b;
+  margin: 0;
+}
+
+.precision-action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.about-btn-dark {
+  background-color: #0b132a;
+  color: #ffffff;
+  padding: 0.9rem 2rem;
+  border-radius: 4px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.about-btn-dark:hover {
+  opacity: 0.9;
+}
+
+.about-btn-flat {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #0b132a;
+  text-decoration: none;
+  border-bottom: 2px solid #0b132a;
+  padding-bottom: 0.25rem;
+}
+
+/* Metrics Dashboard Grid Lines Architecture */
+.metrics-dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.metric-box {
+  background-color: #f8fafc;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.border-bottom { border-bottom: 1px solid #e2e8f0; }
+.border-right { border-right: 1px solid #e2e8f0; }
+
+.metric-number {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #0b132a;
+  margin-bottom: 0.5rem;
+}
+
+.metric-label {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 0.05em;
+}
+
+/* ==========================================
+   SECTION 5: DARK EXECUTIVE QUOTE
+   ========================================== */
+.about-quote-block-section {
+  background-color: #0b132a;
+  padding: 8.5rem 2rem;
+  text-align: center;
+}
+
+.unique-quote-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quote-vector-glyph {
+  color: #38bdf8;
+  margin-bottom: 2.5rem;
+}
+
+.quote-vector-glyph svg {
+  width: 32px;
+  height: 32px;
+}
+
+.about-quote-block-section blockquote {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.2rem;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #ffffff;
+  max-width: 820px;
+  margin: 0 0 2rem 0;
+  padding: 0;
+  border: none;
+}
+
+.quote-author-tag {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #38bdf8;
+  margin-bottom: 0.5rem;
+}
+
+.quote-footer-subtext {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ========================================== */
+@media (max-width: 1100px) {
+  .grid-2-col {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  .about-hero-title { font-size: 3rem; }
+  .bridge-cards-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+
+@media (max-width: 650px) {
+  .about-hero-title { font-size: 2.25rem; }
+  .about-section-title { font-size: 2.25rem; }
+  .mini-highlights-row { grid-template-columns: 1fr; gap: 1.5rem; }
+  .metrics-dashboard-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+  .border-right { border-right: none; }
+  .metric-box { border-bottom: 1px solid #e2e8f0; }
+  .metric-box:last-child { border-bottom: none; }
+  .about-quote-block-section blockquote { font-size: 1.6rem; }
+}
