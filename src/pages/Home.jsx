@@ -61,7 +61,7 @@ export default function Home() {
             </h1>
             
             <p className="hero-tagline">
-              Computer Engineering student and front-end engineer specializing in building responsive, modern web applications with <strong>JavaScript, React, Next.js, Tailwind CSS, and HTML</strong>.
+              Computer Engineering student and front-end engineer specializing in building responsive, modern web applications with <strong>JavaScript, React, Next.js, Tailwind CSS, Node.js, Python, CSS, Typescript and HTML</strong>.
             </p>
             
             <div className="hero-cta-group">
